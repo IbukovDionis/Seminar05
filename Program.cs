@@ -2,7 +2,7 @@
 using System.Dynamic;
 
 public class Seminar05 {
-    static void Zadanie01(){
+    static void Domashka(){
         
         int ReadInt(string text){ //функция 
             Console.Write(text);
@@ -29,8 +29,6 @@ public class Seminar05 {
             }
         }
 
-
-
         void ReplaceInMatrix(int [,] Matrix,int print){
             int Replace;
             for (int column = 0; column < Matrix.GetLength(1); column++ ){
@@ -41,13 +39,12 @@ public class Seminar05 {
             if (print == 0) PrintMatrx(Matrix);
         }
 
-
         int FindMinSummSrting(int [,] Matrix, int operation){
             int MinStringSumm = 0;
             for (int j = 0; j < Matrix.GetLength(1); j++){
                     MinStringSumm += Matrix[0,j];
                 }
-            
+
             int ResultIndex = 0;
             for (int i = 0; i < Matrix.GetLength(0); i++){
                 int summ = 0;
@@ -65,13 +62,11 @@ public class Seminar05 {
             else return 0;
         }
 
-        
 
         Console.WriteLine("Домашнее задание к семинару №5 (Работа с двумерными массивами)\n\nДля начала создадим двумерный массив");
         int n = ReadInt("Введите количество строк массива: ");
         int m = ReadInt("Введите количество столбцов массива: ");
         int[,] Matrix = NewMatrx(n,m, 0, 50);
-
 
         // Задание 1
         Console.WriteLine("\nЗадание 1\nПрограмма приниmает на вход позицию элемента в двумерном массиве, и возвращяет его значение. ");
@@ -106,10 +101,7 @@ public class Seminar05 {
 
 
     static void Main(){
-        
-
-
-        Zadanie01();
+        Domashka();
     }
 
 }
